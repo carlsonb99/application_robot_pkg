@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+<robot name="simple-robot" >
+
+	<material name="white">
+		<color rgba="1 1 1 1"/>
+	</material>
+
+	<material name="black">
+		<color rgba="0 0 0 1"/>
+	</material>
+
+	<link name="base_link">
+		<visual>
+			<geometry>
+				<cylinder length=".1" radius=".2"/>
+			</geometry>
+			<material name="white"/>
+		</visual>
+	</link>
+
+	<link name="left_wheel">
+		<visual>
+			<origin rpy= "0 1.5708 0" />
+			<geometry>
+				<cylinder length=".03" radius=".075"/>
+			</geometry>
+			<material name="black"/>
+		</visual>
+	</link>
+
+	<link name="right_wheel">
+		<visual>
+			<origin rpy= "0 1.5708 0" />
+			<geometry>
+				<cylinder length=".03" radius=".075"/>
+			</geometry>
+			<material name="black"/>
+		</visual>
+	</link>
+
+	<link name="front_caster">
+		<visual>
+			<geometry>
+				<sphere radius=".02"/>
+			</geometry>
+			<material name="black"/>
+		</visual>
+	</link>
+
+	<link name="rear_caster">
+		<visual>
+			<geometry>
+				<sphere radius=".02"/>
+			</geometry>
+			<material name="black"/>
+		</visual>
+	</link>
+
+	<joint name="left_wheel" type="continuous">
+		<parent link="base_link"/>
+		<child link="left_wheel"/>
+		<origin xyz=".2 0 0" />
+		<axis xyz= "1 0 0" />
+	</joint>
+
+	<joint name="right_wheel" type="continuous">
+		<parent link="base_link"/>
+		<child link="right_wheel"/>
+		<origin xyz="-.2 0 0" />
+		<axis xyz= "1 0 0" />
+	</joint>
+
+	<joint name="front_caster" type="fixed">
+		<parent link="base_link"/>
+		<child link="front_caster"/>
+		<origin xyz="0 -.15 -.05" />
+		<axis xyz= "1 0 0" />
+	</joint>
+
+	<joint name="rear_caster" type="fixed">
+		<parent link="base_link"/>
+		<child link="rear_caster"/>
+		<origin xyz="0 .15 -.05" />
+		<axis xyz= "1 0 0" />
+	</joint>
+
+</robot>
