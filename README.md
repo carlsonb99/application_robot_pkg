@@ -46,7 +46,7 @@ Here we can also pass arguments _m_ for angular velocity and _s_ for linear velo
 _roslaunch launch/gazebo.launch m:=2.0 s:=1.0_  
 
 
-![Alt](/images/gazebo_screen_circle.png "Gazebo Circle Driving View")  
+![Alt](/images/gazebo_screen_circle "Gazebo Circle Driving View")  
 
 This will make the robot drive in circles.  
 
