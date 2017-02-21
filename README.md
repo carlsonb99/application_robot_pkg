@@ -31,6 +31,14 @@ Also used are:
 *urdf_tutorial  
 xacro  
 Gazebo*  
+
+Directions to install:  
+  
+1. Navigate to your catkin enabled src directory _../catkin_dir/src/_.
+2. Type _"catkin_create_pkg application_robot_pkg std_msgs rospy roscpp"_ to create the package
+3. Back out one directory _"cd .."_
+4. Type _"catkin_make"_ to build the package
+5. Then copy the contents of this repo into that packages directory in _"../catkin_dir/src/aaplication_robot_pkg"_.  
   
 To bring up the robot in RViz, simply navigate to the application_robot_pkg and run:  
 _roslaunch launch/display.launch_  
